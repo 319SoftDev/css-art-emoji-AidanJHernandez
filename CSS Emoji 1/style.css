@@ -1,0 +1,518 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    background-color:rgb(59, 59, 59);
+    height: 150vh;
+}
+
+.box{
+    flex: 1;
+    margin: 20px;
+    background-color: rgb(167, 167, 167);
+    border-radius: 20px;
+    align-content: center;
+    text-align: center;
+    height: 50vh;
+    transition: background-color 1s;
+    overflow: hidden;
+}
+
+.box:has(.bear2:hover){
+    background-color: rgb(38, 40, 48);
+}
+
+.bear{
+    position: absolute;
+    top: 18%;
+    left: 45%;
+}
+
+.bear:hover .head{
+    background-color: rgb(223, 175, 45);
+    transform: rotate(-8deg);
+}
+
+.bear2{
+    position: absolute;
+    top: 18%;
+    left: 65%;
+    
+}
+
+.bear7{
+    position: absolute;
+    top: 118%;
+    left: 46%;
+    
+}
+
+.bear2:hover .head{
+    background-color: rgb(173, 106, 43);
+}
+
+.bear2{
+    position: absolute;
+    top: 18%;
+    left: 25%;
+    
+}
+
+.bear3{
+    position: absolute;
+    top: 18%;
+    left: 65%;
+    transition: filter 1.5s;
+}
+
+.bear3:hover{
+    filter: grayscale(100%) blur(5px);
+}
+
+
+.bear4{
+    position: absolute;
+    top: 68%;
+    left: 45%;
+    animation-name: headshake;
+    animation-duration: 0.23s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.abox{
+    overflow: hidden;
+}
+.bear5{
+    position: absolute;
+    top: 68%;
+    left: 25%;
+    animation-name: moveoncams;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes headshake{
+  0%  {transform: rotate(-15deg); top: 66%; left: 44%; scale: 110%;}
+  33% {transform: rotate(-7deg); top: 67%; left: 45%; scale: 120%;}
+  66% {transform: rotate(-8deg); top: 66%; left: 46%; scale: 115%;}
+  99% {transform: rotate(-8deg); top: 67%; left: 45%; scale: 110%;}
+}
+
+@keyframes moveoncams{
+  0%  {transform: rotate(0deg); top: 60%; left: 28%; scale: 40%; filter: grayscale(100%) blur(100px);}
+  0.5%  {transform: rotate(0deg); top: 60%; left: 28%; scale: 40%; filter: grayscale(80%) blur(10px);}
+  19.9%  {transform: rotate(0deg); top: 60%; left: 28%; scale: 40%; filter: grayscale(80%) blur(10px);}
+  20% {transform: rotate(2deg); top: 62%; left: 25%; scale: 50%; filter: grayscale(100%) blur(100px);}
+  20.5% {transform: rotate(2deg); top: 62%; left: 25%; scale: 50%; filter: grayscale(70%) blur(7px);}
+  39.9% {transform: rotate(2deg); top: 62%; left: 25%; scale: 50%; filter: grayscale(70%) blur(7px);}
+  40% {transform: rotate(-8deg); top: 64%; left: 30%; scale: 65%; filter: grayscale(100%) blur(100px);}
+  40.5% {transform: rotate(-8deg); top: 64%; left: 30%; scale: 65%; filter: grayscale(60%) blur(4px);}
+  59.9% {transform: rotate(-8deg); top: 64%; left: 30%; scale: 65%; filter: grayscale(60%) blur(4px);}
+  60% {transform: rotate(0deg); top: 64%; left: 20%; scale: 90%; filter: grayscale(100%) blur(100px);}
+  60.5% {transform: rotate(0deg); top: 64%; left: 20%; scale: 90%; filter: grayscale(55%) blur(2px);}
+  79.9% {transform: rotate(0deg); top: 64%; left: 20%; scale: 90%; filter: grayscale(55%) blur(2px);}
+  80% {transform: rotate(10deg); top: 55%; left: 24%; scale: 150%; filter: grayscale(100%) blur(100px);}
+  80.5% {transform: rotate(10deg); top: 55%; left: 24%; scale: 150%; filter: grayscale(0%) blur(0px);}
+  99.9% {transform: rotate(10deg); top: 55%; left: 24%; scale: 150%; filter: grayscale(0%) blur(0px);}
+  100%  {transform: rotate(0deg); top: 60%; left: 28%; scale: 50%; filter: grayscale(100%) blur(100px);}
+}
+
+.head {
+    height: 170px;
+    width: 180px;
+    background-color: rgb(173, 106, 43);
+    border-radius: 100% 100% 50% 50%;
+    position: absolute;
+    top: 50%;
+    left: 27.5%;
+    transition: background-color 1s, transform 1s;
+}
+
+.bear:hover .cheeks{
+    background-color: rgb(223, 175, 45);
+}
+
+.cheeks {
+    height: 80px;
+    width: 210px;
+    background-color: rgb(173, 106, 43);
+    border-radius: 140% 140% 100% 100%;
+    position: absolute;
+    top: 58%;
+    left: -8%;
+    transition: background-color 1s;
+}
+
+.bear:hover .ear-L{
+    background-color: rgb(196, 130, 7);
+    outline-color: rgb(223, 175, 45);
+}
+
+.ear-L {
+    height: 60px;
+    width: 60px;
+    background-color: rgb(94, 54, 22);
+    outline-style: solid;
+    outline-color: rgb(173, 106, 43);
+    outline-width: 10px;
+    border-radius: 60% 50% 70% 50%;
+    position: absolute;
+    top: 2%;
+    left: -21%;
+    transition: background-color 1s, outline-color 1s;
+}
+
+.bear:hover .ear-R{
+    background-color: rgb(196, 130, 7);
+    outline-color: rgb(223, 175, 45);
+}
+
+.ear-R {
+    height: 60px;
+    width: 60px;
+    background-color: rgb(94, 54, 22);
+    outline-style: solid;
+    outline-color: rgb(173, 106, 43);
+    outline-width: 10px;
+    border-radius: 50% 60% 50% 70%;
+    position: absolute;
+    top: 2%;
+    left: 85%;
+    transition: background-color 1s, outline-color 1s;
+}
+    
+.bear:hover .snout{
+    background-color: rgb(201, 163, 58);
+    top: 74%;
+    left: 8%;
+}
+
+
+.snout {
+    height: 75px;
+    width: 150px;
+    background-color: rgb(187, 136, 77);
+    border-radius: 100% 100% 70% 70%;
+    position: absolute;
+    top: 75%;
+    left: 8%;
+    transition: background-color 1s, outline-color 1s, top 0.5s;
+}
+
+.bear2:hover .eye-L{
+    background-color: rgb(255, 255, 255);
+    outline-color: rgb(0, 0, 0)
+}
+
+.bear4 .eye-L{
+    background-color: rgb(255, 255, 255);
+    outline-color: rgb(0, 0, 0);
+    border-radius: 100% 100% 100% 100%;
+}
+
+.eye-L {
+    height: 50px;
+    width: 55px;
+    outline-style: solid;
+    outline-color: rgb(0, 0, 0);
+    outline-width: 5px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 100% 120% 100% 100%;
+    position: absolute;
+    top: 48%;
+    left: 59%;
+    transition: background-color 0.5s, outline-color 2s;
+}
+
+.bear2:hover .eye-R{
+    background-color: rgb(255, 255, 255);
+    outline-color: rgb(0, 0, 0)
+}
+
+.eye-R {
+    height: 50px;
+    width: 55px;
+    outline-style: solid;
+    outline-color: rgb(0, 0, 0);
+    outline-width: 5px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 120% 100% 100% 100%;
+    position: absolute;
+    top: 48%;
+    left: 10%;
+    transition: background-color 0.5s, outline-color 2s;
+}
+
+.bear4 .eye-R{
+    background-color: rgb(255, 255, 255);
+    outline-color: rgb(0, 0, 0);
+    border-radius: 100% 100% 100% 100%;
+}
+
+.bear:hover .nose{
+    background-color: rgb(75, 67, 109);
+}
+
+.nose {
+    height: 25px;
+    width: 50px;
+    background-color: rgb(41, 39, 38);
+    border-radius: 90% 90% 100% 100%;
+    position: absolute;
+    top: 30%;
+    left: 34%;
+    transition: background-color 1s;
+}
+
+.bear:hover .jaw{
+    background-color: rgb(0, 0, 0);
+    outline-color: rgb(202, 150, 8);
+    top: 95%;
+    left: 14%;
+}
+
+.bear2:hover .jaw{
+    background-color: rgb(255, 255, 255);
+}
+
+.bear4 .jaw{
+    animation-name: jawscare;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+}
+
+.bear5 .jaw{
+    animation-name: jawcams;
+    animation-duration: 12s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+}
+
+.bear6 .jaw{
+    animation-name: jawscare;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+}
+
+@keyframes jawscare {
+  0%   {top:120px;}
+  50%  {top:160px;}
+  100% {top:120px;}
+}
+
+@keyframes jawcams{
+  0%  {top: 75%;}
+  19.9%  {top: 75%;}
+  20% {top: 80%;}
+  39.9% {top: 80%;}
+  40% {top: 75%;}
+  59.9% {top: 75%;}
+  60% {top: 80%;}
+  79.9% {top: 80%;}
+  80% {top: 95%;}
+  99.9% {top: 95%;}
+  100%  {top: 75%;}
+}
+
+.jaw {
+    height: 90px;
+    width: 130px;
+    background-color: rgb(0, 0, 0);
+    outline-style: solid;
+    outline-color: rgb(156, 91, 29);
+    outline-width: 15px;
+    border-radius: 20% 20% 50% 50%;
+    position: absolute;
+    top: 80%;
+    left: 14%;
+    transition: top 0.5s, outline-color 1s, background-color 0.5s;
+}
+
+.bear:hover .hatbrim{
+    background-color: rgb(75, 67, 109);
+}
+
+.hatbrim {
+    height: 40px;
+    width: 105px;
+    background-color: rgb(47, 46, 51);
+    border-radius: 100% 100% 100% 100%;
+    position: absolute;
+    top: -1%;
+    left: 20%;
+    transition: background-color 1s;
+}
+
+.bear:hover .hattop{
+    background-color: rgb(75, 67, 109);
+}
+
+.hattop {
+    height: 60px;
+    width: 68px;
+    background-color: rgb(47, 46, 51);
+    border-radius: 10% 10% 00% 00%;
+    position: absolute;
+    top: -26%;
+    left: 30%;
+    transition: background-color 1s;
+}
+
+.bear6{
+    position: relative;
+    bottom: 120px;
+    right:-1500px;
+    animation-name: brun;
+    animation-timing-function: linear;
+    animation-duration: 2s;
+    animation-delay: 0.2s;
+    animation-iteration-count: infinite;
+}
+
+.purpleguy{
+    position: relative;
+    bottom: 60px;
+    right:-1500px;
+    scale: 80%;
+    animation-name: prun;
+    animation-timing-function: linear;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes scream{
+    0% {height: 85px; top: 67%}
+    49.9% {height: 85px; top: 67%}
+    50% {height: 70px; top: 65%}
+    99.9% {height: 70px; top: 65%}
+}
+
+@keyframes disappear{
+    0% {opacity: 100%}
+    49.9% {opacity: 100%}
+    50% {opacity: 0%}
+    99.9% {opacity: 0%}
+}
+
+@keyframes prun{
+from{
+transform: translateX(0%);
+}
+to{
+    transform: translateX(-175%);
+}
+}
+
+@keyframes brun{
+from{
+transform: translateX(45%);
+}
+to{
+    transform: translateX(-150%);
+}
+}
+
+
+.purplehead1 {
+    height: 190px;
+    width: 130px;
+    background-color: rgb(139, 67, 197);
+    position: absolute;
+    top: 50%;
+    left: 27.5%;
+}
+
+.purplehead2 {
+    height: 160px;
+    width: 170px;
+    background-color: rgb(139, 67, 197);
+    position: absolute;
+    top: 8%;
+    left: -14%;
+}
+
+.purpeye1 {
+    height: 60px;
+    width: 65px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top: 28%;
+    left: -24%;
+}
+
+.purpeye2 {
+    height: 60px;
+    width: 65px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top: 28%;
+    left: 48%;
+}
+
+.purpmouth {
+    height: 80px;
+    width: 120px;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    top: 64%;
+    left: -7%;
+    animation-name: scream;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+
+
+.purpbrow1 {
+    height: 18px;
+    width: 65px;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    top: 8%;
+    left: 43%;
+}
+
+.purpbrow2 {
+    height: 18px;
+    width: 65px;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    top: 8%;
+    left: -23%;
+}
+
+.sweat1 {
+    height: 40px;
+    width: 40px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top: -21%;
+    left: 103%;
+    animation-name: disappear;
+    animation-timing-function: linear;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+
+.sweat2 {
+    height: 35px;
+    width: 35px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top: 5%;
+    left: 130%;
+    animation-name: disappear;
+    animation-timing-function: linear;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
